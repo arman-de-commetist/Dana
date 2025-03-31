@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё признание</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #text {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="text"></h1>
+        <button onclick="location.href='gallery.html'">Дальше</button>
+    </div>
+    
+    <script>
+        let text = "Ты – самый дорогой человек для меня. Я хочу, чтобы ты знала, как сильно я тебя люблю...";
+        let i = 0;
+        let speed = 50; 
+
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("text").textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            } else {
+                document.getElementById("text").style.opacity = 1; 
+            }
+        }
+
+        window.onload = typeWriter;
+    </script>
+
+<audio id="bg-music" loop>
+    <source src="music/background.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("bg-music");
+
+        // Проверяем, была ли музыка уже запущена
+        if (localStorage.getItem("musicPlaying") === "true") {
+            audio.currentTime = localStorage.getItem("musicTime") || 0;
+            audio.play();
+        }
+
+        // Следим за изменением времени проигрывания
+        audio.addEventListener("timeupdate", function () {
+            localStorage.setItem("musicTime", audio.currentTime);
+        });
+
+        // Если пользователь нажал "play", сохраняем статус
+        audio.addEventListener("play", function () {
+            localStorage.setItem("musicPlaying", "true");
+        });
+
+        // Если пользователь поставил на паузу
+        audio.addEventListener("pause", function () {
+            localStorage.setItem("musicPlaying", "false");
+        });
+    });
+</script>
+
+<script>
+    // Проверяем, запущен ли уже плеер
+    if (!window.musicPlayer || window.musicPlayer.closed) {
+        window.musicPlayer = window.open("player.html", "MusicPlayer", "width=200,height=100");
+    }
+</script>
+
+<audio id="background-music" loop>
+    <source src="audio/background.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+
+
+</body>
+</html>

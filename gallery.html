@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Дана, ты ослепила меня своей красотой</h1>
+        
+        <div class="gallery">
+            <img src=img/photo1.jpg.jpeg alt="фото1">
+            <img src=img/photo2.jpg.jpeg alt="Фото2" >
+            <img src=img/photo3.jpg.jpeg alt="Фото3">
+        </div>
+
+        <a href="apology.html" class="button">Прости меня</a>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Проверяем, запущен ли уже плеер
+        if (!window.musicPlayer || window.musicPlayer.closed) {
+            window.musicPlayer = window.open("player.html", "MusicPlayer", "width=200,height=100");
+        }
+    </script>
+
+<audio id="background-music" loop>
+    <source src="audio/background.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+
+</body>
+</html>

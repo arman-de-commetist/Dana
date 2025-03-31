@@ -1,0 +1,362 @@
+body {
+    margin: 0; 
+    padding: 0;
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: #ff758c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff5c73;
+}
+
+
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+img {
+    width: 300px; 
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+
+.misic-player {
+text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+from {
+    opacity: 0;
+    transform: translateY(-20px);
+}
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+h1 {
+font-size: 36px;
+color: #ff69b4;
+text-align: center;
+animation: fadeInDown 1.5s ease-in-out;
+}
+
+
+
+@keyframes heartbeat {
+    0% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 0.8; }
+}
+
+.hearts {
+    text-align: center;
+    font-size: 24px;
+    color: red;
+    animation: heartbeat 1.5s infinite;
+}
+
+
+
+
+@keyframes gradientBg {
+    0% { background: #ffb6c1; }
+    50% { background: #ff69b4; }
+    100% { background: #ffb6c1; }
+}
+
+body {
+    animation: gradientBg 5s infinite alternate;
+}
+
+
+
+
+
+
+.container {
+    text-align: center;
+    padding: 50px;
+    color: white;
+}
+
+h1 {
+    font-size: 36px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1, .message {
+    text-shadow: 0px 0px 10px rgba(255, 182, 193, 0.8); 
+}
+
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Легкая тень */
+}
+
+.message {
+    font-size: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 10px;
+    color: white; 
+}
+
+.message {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.heart-container {
+    font-size: 30px;
+    margin: 20px;
+    animation: heartbeat 1.5s infinite;
+}
+
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff69b4;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: #ff1493;
+}
+
+
+
+@keyframes falling {
+    0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+}
+
+.falling-petals {
+    position: fixed;
+    top: -10px;
+    width: 20px;
+    height: 20px;
+    background: pink;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: falling 5s linear infinite;
+}
+
+
+    @keyframes falling {
+        0% { transform: translateY(-10px) rotate(0deg); opacity: 1; }
+        100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    
+    .falling-petals {
+        position: fixed;
+        top: -10px;
+        width: 20px;
+        height: 20px;
+        background: pink;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: falling 5s linear infinite;
+    }
+    
+    .falling-petals:nth-child(1) { left: 10%; animation-duration: 6s; }
+    .falling-petals:nth-child(2) { left: 30%; animation-duration: 7s; }
+    .falling-petals:nth-child(3) { left: 50%; animation-duration: 5s; }
+    .falling-petals:nth-child(4) { left: 70%; animation-duration: 6.5s; }
+    .falling-petals:nth-child(5) { left: 90%; animation-duration: 8s; }
+    
+    
+
+
+    @keyframes heartbeat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    
+    .heart {
+        font-size: 50px;
+        color: red;
+        text-align: center;
+        animation: heartbeat 1.5s infinite;
+    }
+
+
+
+    @keyframes fadeIn {
+        0% { opacity: 0; transform: translateY(-20px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+    
+    
+    h1, .message, .heart, .button, audio {
+        animation: fadeIn 2s ease-in-out;
+    }
+
+
+
+    .heart {
+        font-size: 50px;
+        color: red;
+        text-align: center;
+        animation: heartbeat 1.5s infinite;
+        text-shadow: 0px 0px 20px rgba(255, 0, 0, 0.8);
+    }
+    
+
+
+    @keyframes twinkle {
+        0% { opacity: 0.3; }
+        50% { opacity: 1; }
+        100% { opacity: 0.3; }
+    }
+    
+    .star {
+        position: fixed;
+        width: 5px;
+        height: 5px;
+        background: white;
+        border-radius: 50%;
+        animation: twinkle 3s infinite;
+    }
+    
+    .star:nth-child(1) { top: 10%; left: 20%; animation-duration: 2s; }
+    .star:nth-child(2) { top: 30%; left: 50%; animation-duration: 3s; }
+    .star:nth-child(3) { top: 60%; left: 70%; animation-duration: 4s; }
+    .star:nth-child(4) { top: 80%; left: 30%; animation-duration: 5s; }
+
+
+
+    @keyframes typing {
+        from { width: 0; }
+        to { width: 100%; }
+    }
+    
+    .typing-text {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid white;
+        width: 0;
+        animation: typing 3s steps(40) forwards, blink 0.7s infinite;
+    }
+    
+    @keyframes blink {
+        50% { border-color: transparent; }
+    }
+
+
+
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+    
+    .pulsing-button {
+        display: inline-block;
+        background: #ff4d6d;
+        color: white;
+        padding: 15px 30px;
+        font-size: 18px;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: 0.3s;
+        animation: pulse 2s infinite;
+    }
+    
+    .pulsing-button:hover {
+        background: #ff1a4b;
+    }
+
+
+
+    .music-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #ff4d6d;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    .music-button:hover {
+        background: #ff1a4b;
+    }

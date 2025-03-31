@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моё признание</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Дорогая, у меня есть кое-что важное для тебя...</h1>
+        <button onclick="location.href='love.html'">Перейти к признанию</button>
+    </div>
+
+    <!-- Музыка -->
+    <audio id="bg-music" loop>
+        <source src="music/backrgound..mp3" type="audio/mpeg">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <!-- Кнопка для включения музыки -->
+    <button id="play-music" onclick="playMusic()">Включить музыку</button>
+
+    <script>
+        function playMusic() {
+            let audio = document.getElementById('bg-music');
+            audio.play();
+            document.getElementById('play-music').style.display = 'none'; 
+        }
+    </script>
+
+<audio id="bg-music" loop>
+    <source src="music/backrgound..mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    
+    if (!window.musicPlayer || window.musicPlayer.closed) {
+        window.musicPlayer = window.open("player.html", "MusicPlayer", "width=200,height=100");
+    }
+</script>
+<audio id="background-music" loop>
+    <source src="music/backrgound..mp3" type="audio/mp3">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let audio = document.getElementById("backrgound-music");
+
+        // Проверяем, играет ли музыка
+        if (!localStorage.getItem("musicPlaying")) {
+            audio.play();
+            localStorage.setItem("musicPlaying", "true");
+        }
+        
+        // Чтобы музыка не дублировалась при каждом переходе, включаем её один раз
+        window.addEventListener("beforeunload", function () {
+            localStorage.removeItem("musicPlaying");
+        });
+    });
+</script>
+<audio id="background-music" loop>
+    <source src="music/backrgound.mp3" type="audio/mp3">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+<iframe src="player.html" style="display: none;" name="music-frame"></iframe>
+
+<audio id="backrgound-music" loop>
+    <source src="audio/backrgound..mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+
+</body>
+</html>

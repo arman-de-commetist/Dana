@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прости меня</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+<div class="star"></div>
+    <div class="heart">❤️</div>
+    <div class="falling-petals"></div>
+    <div class="falling-petals"></div>
+    <div class="falling-petals"></div>
+    <div class="falling-petals"></div>
+    <div class="falling-petals"></div>
+    <div class="container">
+        <h1>Прости меня...</h1>
+        <p class="message">Я очень сожалею о том, что произошло. Мне важно, чтобы ты знала, как сильно я ценю тебя... Я понял все, мне правда очень жаль, что так случилось. Ты говорила, что важно доказать словами и поступками – и я готов это сделать. Я буду всегда рядом с тобой. Давай поговорим, дай мне возможность исправить свою ошибку.</p>
+        
+        <div class="heart-container">
+            ❤️ ❤️ ❤️
+        </div>
+        <a href="index.html" class="pulsing-button">Вернуться назад</a>
+    </div>
+
+    <audio id="bg-music" loop>
+        <source src="music/background.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Проверяем, запущен ли уже плеер
+        if (!window.musicPlayer || window.musicPlayer.closed) {
+            window.musicPlayer = window.open("player.html", "MusicPlayer", "width=200,height=100");
+        }
+    </script>
+
+<audio id="background-music" loop>
+    <source src="audio/background.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+</body>
+</html>

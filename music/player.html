@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Музыкальный плеер</title>
+</head>
+<body>
+    <audio id="bg-music" autoplay loop>
+        <source src="music/background.mp3" type="audio/mp3">
+        Ваш браузер не поддерживает аудио.
+    </audio>
+
+    <script>
+        // Проверяем, запущен ли уже плеер
+        if (!window.musicPlayer || window.musicPlayer.closed) {
+            window.musicPlayer = window.open("player.html", "MusicPlayer", "width=200,height=100");
+        }
+    </script>
+
+<audio id="background-music" loop>
+    <source src="audio/background.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает аудио.
+</audio>
+
+
+
+</body>
+</html>
